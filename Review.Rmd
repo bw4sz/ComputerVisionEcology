@@ -16,6 +16,11 @@ library(tidyr)
 dat<-read.csv("Review.csv")
 dat<-droplevels(dat)
 dat<-dat[!dat$Focus=="",]
+dat$Focus<-as.character(dat$Focus)
+dat[dat$Focus=="Measurement","Focus"]<-"Description"
+
+dat$Focus<-factor(dat$Focus,level=c("Description","Counting","Identity"))
+
 ```
 
 #Articles per year
@@ -24,8 +29,8 @@ dat<-dat[!dat$Focus=="",]
 #cut
 dat$YearC<-cut(dat$Year,c(1980,1990,2000,2005,2006:2017),labels=c(1980,1990,2000,2005,2006:2016),right = F)
 dat<-dat[!is.na(dat$YearC),]
-ggplot(dat,aes(x=YearC)) + geom_bar() + theme_bw() + labs(x="Year",y="Articles")
-ggsave("Figures/PerYear.jpeg",height=4,width=6)
+ggplot(dat,aes(x=YearC)) + geom_bar() + theme_bw() + labs(x="Year",y="Articles") + facet_wrap(~Focus,ncol=1)
+ggsave("Figures/PerYear.jpeg",height=7,width=6)
 ```
 
 # Type
@@ -34,10 +39,9 @@ ggsave("Figures/PerYear.jpeg",height=4,width=6)
 ord<-dat %>% group_by(Taxa) %>% summarise(n=n()) %>% arrange(n) %>% .$Taxa
 dat$Taxa<-factor(dat$Taxa,levels=rev(ord))
 
-dat$Focus<-factor(dat$Focus,level=c("Measurement","Counting","Tracking","Identity"))
 ggplot(dat,aes(x=Taxa)) + facet_wrap(~Focus,scales="free",nrow=1)  + geom_bar() + labs(y="Articles") + theme_bw() + theme(axis.text.x=element_text(angle=-50,hjust=0.1),plot.margin = margin(10, 30, 10, 10))
 
-ggsave("Figures/Focus_Taxa.jpeg",height=4,width=9)
+ggsave("Figures/Focus_Taxa.jpeg",height=4,width=10)
 ```
 
 Data Table

@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="NueralNetwork.svg"
-   inkscape:export-filename="C:\Users\Ben\Documents\ComputerVisionEcology\Figures\NueralNetwork.png"
+   inkscape:export-filename="/Users/Ben/Documents/ComputerVisionEcology/Figures/NeuralNetwork.png"
    inkscape:export-xdpi="400"
    inkscape:export-ydpi="400">
   <defs
@@ -129,16 +129,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.33503545"
-     inkscape:cx="-49.454677"
+     inkscape:zoom="0.47381168"
+     inkscape:cx="458.93491"
      inkscape:cy="472.29217"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1440"
+     inkscape:window-height="855"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
      inkscape:window-maximized="1"
      showguides="false" />
   <metadata
@@ -158,6 +158,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-308.26772)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4255"
+       width="1027.8345"
+       height="681.70544"
+       x="8.442173"
+       y="334.77753" />
     <text
        sodipodi:linespacing="125%"
        id="text4268"
